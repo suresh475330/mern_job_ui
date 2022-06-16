@@ -1,9 +1,10 @@
 import React from "react";
-import {FaSignInAlt,FaSignOutAlt,FaUser } from 'react-icons/fa';
+import {FaSignInAlt,FaSignOutAlt,FaUser,FaUserCircle } from 'react-icons/fa';
 import {Link} from 'react-router-dom'
 import {useSelector,useDispatch} from "react-redux"
 import {useNavigate} from 'react-router-dom'
 import {logout,reset} from '../features/auth/authSlice'
+import { editing } from "../features/jobs/jobSilces";
 
 const Header = () => {
 
@@ -23,11 +24,17 @@ const Header = () => {
       <>
     <div className='header'>
       <div className="logo">
-          <Link to="/">GoaSelecter</Link>
+          <Link to="/">Jobs Selecter</Link>
+         
+         {user &&  <button className="btn" onClick={()=> dispatch(editing())}>
+               AddJobs
+           </button>}
       </div>
+     
       <ul>
         {user ? (
           <>
+          <FaUserCircle />  <h5 className="user">{user.user.name}</h5>
            <li>
            <button className="btn" onClick={onLogout}>
                 <FaSignOutAlt /> Logout

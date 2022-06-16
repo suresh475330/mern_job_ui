@@ -26,7 +26,7 @@ const Register = () => {
 
     useEffect(()=>{
      if(isError){
-      console.log("error on Register");
+      alert(new Error(`Register failed : ${message}`));
      }
      if(isSucces || user){
       navigate("/")
@@ -42,6 +42,8 @@ const Register = () => {
      }))
      
    }
+
+   //qwbBobK3JLgAWJAy
 
    const onSubmit = (e) => {
     e.preventDefault()

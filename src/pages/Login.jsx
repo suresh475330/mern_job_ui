@@ -22,7 +22,10 @@ const Login = () => {
 
     useEffect(()=>{
       if(isError){
-       console.log("error on login");
+        if(message === undefined){
+         return alert(new Error(`Login failed plz try agian later`));
+        }
+        alert(new Error(`Login failed : ${message}`));
       }
       if(isSucces || user){
        navigate("/")

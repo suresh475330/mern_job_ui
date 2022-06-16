@@ -94,9 +94,24 @@ h3 {
 
 .goal {
   background-color: #f4f4f4;
-  margin: 10px 0;
-  padding: 20px 0 10px;
-  position: relative;
+  margin: 1em 0;
+  padding: 1.5rem 0.5em 1em;
+}
+ 
+.goal > h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color:lightslategray;
+}
+.goal > h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  color:lightslategray;
+}
+.goal > p {
+  font-size: 1rem;
+  font-weight: 600;
+  color:lightseagreen;
 }
 
 .goal .close {
@@ -189,6 +204,23 @@ h3 {
   border-color: #000 transparent #555 transparent;
   border-radius: 50%;
   animation: spin 1.2s linear infinite;
+}
+
+.user {
+  text-align: center;
+  color: #555;
+  padding-left: 1px;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 0.5em;
+}
+.button {
+  cursor: pointer;
+
 }
 
 @keyframes spin {
