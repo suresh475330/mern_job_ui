@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const url = "https://cat-jobs-api.herokuapp.com/api/v1"
+const url = process.env.REACT_APP_SERVER_URL;
 
 const register = async (userData) =>{
     const {data} = await axios.post(`${url}/auth/register`,userData)
