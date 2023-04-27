@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const url = process.env.REACT_APP_SERVER_URL;
+const url = "https://cat-job.onrender.com/api/v1";
 
 const register = async (userData) =>{
     const {data} = await axios.post(`${url}/auth/register`,userData)
